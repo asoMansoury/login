@@ -7,16 +7,6 @@ export const useLoginStyles = makeStyles((theme) => ({
         padding: "15px",
       },
     },
-    mainPaperBox: {
-      width: "960px",
-      height: "370px",
-      borderRadius: "10px",
-      // border:"1px solid #fff",
-      background: " rgba( 255, 255, 255, 0.2 )",
-      boxShadow: "0px 0px 14px 5px #3a3a3a",
-      backdropFilter: "blur( 12px )",
-      border: "1px solid rgba( 255, 255, 255, 0.18 )",
-    },
     innerPaperBox: {
       background: "inherit",
       color: theme.palette.common.main,
@@ -26,23 +16,23 @@ export const useLoginStyles = makeStyles((theme) => ({
       justifyContent: "center",
       height: "370px",
       border: "none !important",
+      background:"none !important"
     },
     loginBtnPaperBox: {
-      color: theme.palette.common.white,
-      border: "1px solid #fff",
-      fontFamily: "VazirThin",
+      color: "#fff !important",
+      border: "1px solid #fff !important" ,
+      fontFamily: "VazirLight !important",
       width: "160px",
       height: "44px",
-      color:`red`,
-      fontSize: "16px",
-      fontWeight: "700",
+      fontSize: "16px !important",
+      fontWeight: "700 !important",
       '&:hover': {
-        backgroundColor: '#fff',
-        color: '#3c52b2',
-        background: "linearGradient(to left, salmon 50%, lightblue 50%) right",
-        backgroundSize: "200%",
-        transition: ".5s ease-out",
-        backgroundPosition: "left"
+        backgroundColor: '#fff !important' ,
+        color: '#3c52b2 !important',
+        background: "linearGradient(to left, salmon 50%, lightblue 50%) right !important",
+        backgroundSize: "200% !important",
+        transition: ".5s ease-out !important",
+        backgroundPosition: "left !important"
       },
   
       [`@media screen and (max-width: ${theme.breakpoints.values.md}px)`]: {
@@ -51,7 +41,8 @@ export const useLoginStyles = makeStyles((theme) => ({
         height: "30px",
       },
     },
-    typography: {
+    typographyPaperBox: {
+      color:theme.palette.common.white,
       fontSize: "24px",
       [`@media screen and (max-width: ${theme.breakpoints.values.md}px)`]: {
         fontSize: "15px",
@@ -59,7 +50,7 @@ export const useLoginStyles = makeStyles((theme) => ({
       [`@media screen and (max-width: ${theme.breakpoints.values.sm}px)`]: {
         fontSize: "12px",
       },
-      fontFamily: "VazirThin",
+      fontFamily: "VazirLight !important",
       textAlign: "center",
       padding: "25px",
     },

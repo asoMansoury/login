@@ -8,12 +8,12 @@ import { useLoginStyles } from "../../assests/styles/Styles"
 
 
 function Signup() {
-    const classes = useLoginStyles()
+    const classes = useLoginStyles(theme)
   return (
     <>
       <Grid item xs={6} md={6} className={classes.gridPaperBox}>
         <Paper spacing={2} className={classes.innerPaperBox}>
-          <Typography variant="p" component="p" className={classes.typography}>
+          <Typography variant="h5" component="h2" className={classes.typographyPaperBox}>
             ایجاد حساب کاربری جدید
           </Typography>
           <Link href="/signup" passHref>

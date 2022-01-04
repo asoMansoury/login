@@ -6,7 +6,7 @@ import { Paper, Button, Typography } from "@material-ui/core"
 import { Box } from "@material-ui/core"
 import Link from "next/link"
 import Signup from "../src/components/login/Signup"
-import Login from "../src/components/login/login"
+import Login from "../src/components/Login/Login"
 import theme from "../src/utils/theme"
 
 const useStyles = makeStyles((theme) => ({
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   
 }))
 const MainLogin = () => {
-  const classes = useStyles()
+  const classes = useStyles(theme)
 
   return (
     <>
@@ -43,7 +43,7 @@ const MainLogin = () => {
           alignItems: "center",
         }}
       >
-        <Box component="main" fullWidth="md" className={classes.mainPaperBox}>
+        <Box component="main" fullwidth="md" className={classes.mainPaperBox}>
           <CssBaseline />
           <Grid container>
             <Signup />
