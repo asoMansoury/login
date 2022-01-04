@@ -1,10 +1,13 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
-import theme from "../src/utils/theme"
 import CssBaseline from "@material-ui/core/CssBaseline"
 import Grid from "@material-ui/core/Grid"
 import { Paper, Button, Typography } from "@material-ui/core"
 import { Box } from "@material-ui/core"
+import Link from "next/link"
+import Signup from "../src/components/login/Signup"
+import Login from "../src/components/login/login"
+import theme from "../src/utils/theme"
 
 const useStyles = makeStyles((theme) => ({
   direction: "rtl",
@@ -23,46 +26,10 @@ const useStyles = makeStyles((theme) => ({
     backdropFilter: "blur( 12px )",
     border: "1px solid rgba( 255, 255, 255, 0.18 )",
   },
-  innerPaperBox: {
-    background: "inherit",
-    color: theme.palette.common.main,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    height: "370px",
-    border: "none !important",
-  },
-  loginBtnPaperBox: {
-    color: theme.palette.common.white,
-    border: "1px solid #fff",
-    fontFamily: "VazirThin",
-    width: "160px",
-    height: "44px",
-    fontSize: "16px",
-    fontWeight: "700",
-    [`@media screen and (max-width: ${theme.breakpoints.values.md}px)`]: {
-      width: "100px",
-      fontSize: "12px",
-      height: "30px",
-    },
-  },
-  typography: {
-    fontSize: "24px",
-    [`@media screen and (max-width: ${theme.breakpoints.values.md}px)`]: {
-      fontSize: "15px",
-    },
-    [`@media screen and (max-width: ${theme.breakpoints.values.sm}px)`]: {
-      fontSize: "12px",
-    },
-    fontFamily: "VazirThin",
-    textAlign: "center",
-    padding: "25px",
-  },
+  
 }))
-
-const Login = () => {
-  const classes = useStyles(theme)
+const MainLogin = () => {
+  const classes = useStyles()
 
   return (
     <>
@@ -79,34 +46,8 @@ const Login = () => {
         <Box component="main" fullWidth="md" className={classes.mainPaperBox}>
           <CssBaseline />
           <Grid container>
-            <Grid item xs={6} md={6} className={classes.gridPaperBox}>
-              <Paper spacing={2} className={classes.innerPaperBox}>
-                <Typography
-                  variant="p"
-                  component="p"
-                  className={classes.typography}
-                >
-                  ایجاد حساب کاربری جدید
-                </Typography>
-                <Button className={classes.loginBtnPaperBox} variant="outlined">
-                  ثبت نام کنید
-                </Button>
-              </Paper>
-            </Grid>
-            <Grid item xs={6} md={6}>
-              <Paper className={classes.innerPaperBox}>
-                <Typography
-                  variant="p"
-                  component="p"
-                  className={classes.typography}
-                >
-                  قبلا حساب کاربری ایجاد کرده ام
-                </Typography>
-                <Button className={classes.loginBtnPaperBox} variant="outlined">
-                  ورود
-                </Button>
-              </Paper>
-            </Grid>
+            <Signup />
+            <Login />
           </Grid>
         </Box>
       </div>
@@ -114,4 +55,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default MainLogin

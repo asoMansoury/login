@@ -6,18 +6,19 @@ import { Paper, Button, Typography } from "@material-ui/core"
 import Link from "next/link"
 import { useLoginStyles } from "../../assests/styles/Styles"
 
-function Login() {
-  const classes = useLoginStyles()
+
+function Signup() {
+    const classes = useLoginStyles()
   return (
     <>
-      <Grid item xs={6} md={6}>
-        <Paper className={classes.innerPaperBox}>
+      <Grid item xs={6} md={6} className={classes.gridPaperBox}>
+        <Paper spacing={2} className={classes.innerPaperBox}>
           <Typography variant="p" component="p" className={classes.typography}>
-            قبلا حساب کاربری ایجاد کرده ام
+            ایجاد حساب کاربری جدید
           </Typography>
-          <Link href="/login" passHref>
+          <Link href="/signup" passHref>
             <Button className={classes.loginBtnPaperBox} variant="outlined">
-              ورود
+              ثبت نام کنید
             </Button>
           </Link>
         </Paper>
@@ -26,4 +27,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Signup
