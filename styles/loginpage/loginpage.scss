@@ -6,6 +6,10 @@
     align-items: "center";
     background:  url("../../src/assests/images/backgroundlanding.png") no-repeat fixed center;
 
+    @media only screen and(max-width:920px){
+        padding: 15px;
+      }
+
     &__container{
         background:  url("../../src/assests/images/assetx.png") no-repeat fixed center;
     }
