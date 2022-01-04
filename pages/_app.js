@@ -4,6 +4,8 @@ import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/utils/theme';
+import "../src/assests/styles/global.scss"
+import "../styles/loginpage/loginpage.scss"
 
 
 export default function MyApp(props) {
